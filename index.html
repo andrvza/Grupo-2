@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Proyecto Integrado</title>
+    <style>
+         body {
+            background-color:#643a22; 
+            color: white; 
+            font-family: Arial, salgerian Fuente */
+            margin: 0;
+            padding: 50px;
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+        
+            align-items: center; 
+            text-align: center;
+        }
+        
+        .background-stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+    }
+    
+    .star {
+      position: absolute;
+      background-color: #fff3e0;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      animation: twinkle 3s infinite;
+    }
+  
+
+     @keyframes twinkle {
+          0% { opacity: 0.3; }
+          50% { opacity: 1; }
+          100% { opacity: 0.3; }
+        }
+   
+        .logo{
+            max-width: 300px;
+            margin: 20px auto;
+            border:none;
+            filter: grayscale(20%);
+        }
+        .Introduccion{
+            margin:20px 0;
+            padding:20px;
+            background-color:#b37451;
+            border-radius:50px;
+            font-family: Arial;
+        }
+
+         Bubbles {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .Bubbles {
+            font-size: 4rem;
+            animation: bounce 2s infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+        }
+        
+         .button-container {
+            display: grid;
+         grid-template-columns: repeat(2, 1fr); 
+            gap: 50px;
+            width: 100%;
+            max-width: 600px
+        }
+        
+        button {
+            padding: 15px;
+            font-size: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #a07b69;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+        }
+        .button2{
+            background-color: #b89280;
+            color: white;
+            padding: 40px 300px;
+            font-size: 30px;
+            font-family:Times;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .button:hover{
+            background-color: #cf987c;
+            color:#c16b40;
+        }
+        h1{
+            color:#c04509;
+            text-shadow: 2px 2px 4px;
+            rgba(#b77d60)
+        }
+        p{
+            color:#3a1a0a;
+        }
+    </style>
+  </head>
+ <div class="background-stars" id="stars"></div>
+  
+  <!--logo--> 
+  <img src="Logo.png" width="300" height="390" class="logo"> 
+  
+  <!--Introduccion--> 
+  <div class="Introduccion"> 
+    <h1>LAMA´M</h1> 
+    <p>Nuestro sitio web brinda información clara, precisa y accesible para nuestros usuarios. Ofrecemos contenido de calidad y actualizado, junto con un diseño atractivo e interactivo para una mejor experiencia. ¡Explora y descubre todo lo que tenemos para ti!</p> 
+  </div> 
+  
+  <div class="Bubbles">
+            <div class="Bubbles">🫧🫧🫧🫧🫧🫧</div>
+        </div>
+
+  <div class="button-container">
+        <button onclick="window.location.href='fisica.html'">Física</button>
+        <button onclick="window.location.href='hoja.html'">Estadística</button>
+        <button onclick="window.location.href='Química.html'">Química/Biología</button>
+        <button onclick="window.location.href='Artes.html'">Arte/Inglés</button>
+        <button onclick="window.location.href='literatura.html'">Literatura</button>
+        <button onclick="window.location.href='valores.html'">Valores</button>
+    </div>
+    
+    <div class="Bubbles">
+            <div class="Bubbles">🫧🫧🫧🫧🫧🫧</div>
+        </div>
+
+  <script>
+    // Crear estrellas con animación twinkle en el fondo
+    const starsContainer = document.getElementById('stars');
+    const starsCount = 100;
+    
+    for (let i = 0; i < starsCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      
+      // Posición aleatoria
+      star.style.left = `${Math.random() * 100}%`;
+      star.style.top = `${Math.random() * 100}%`;
+      
+      // Tamaño aleatorio
+      const size = Math.random() * 2 + 1;
+      star.style.width = `${size}px`;
+      star.style.height = `${size}px`;
+      
+      // Retraso aleatorio en la animación
+      star.style.animationDelay = `${Math.random() * 3}s`;
+      
+      starsContainer.appendChild(star);
+    }
+  </script>
+  </body>
+  </html>
+
